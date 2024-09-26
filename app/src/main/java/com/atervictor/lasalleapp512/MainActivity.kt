@@ -11,6 +11,7 @@ import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.atervictor.lasalleapp512.ui.screen.HomeScreen
 import com.atervictor.lasalleapp512.ui.theme.LaSalleApp512Theme
 
 class MainActivity : ComponentActivity() {
@@ -19,13 +20,12 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             LaSalleApp512Theme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
+                    Scaffold (
+                        modifier = Modifier.fillMaxSize()
+                    ) { innerPadding ->
+                        HomeScreen(innerPadding = innerPadding)
+                    }
                 }
             }
         }
     }
-}
